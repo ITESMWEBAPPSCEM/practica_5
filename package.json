@@ -1,0 +1,19 @@
+{
+  "name": "practica_5",
+  "version": "1.0.0",
+  "description": "ITESM CEM practica 5",
+  "main": "base.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITESMWEBAPPSCEM/practica_5.git"
+  },
+  "author": "Arturo Amador, Jose Pablo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ITESMWEBAPPSCEM/practica_5/issues"
+  },
+  "homepage": "https://github.com/ITESMWEBAPPSCEM/practica_5#readme"
+}
