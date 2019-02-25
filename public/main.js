@@ -1,21 +1,23 @@
+var $ = jQuery;
 function pasarLista() {
+
     $.ajax({
-        url:"http://localhost:3000/pasar_lista",
+		url:"http://localhost:3000/pasar_lista",
         type:'POST',
-        data:{
-            "alumno":{
-                "nombre":$('#nombre').val(),
-                "matricula":$('#matricula').val(),
-                "correo":$('#correo').val()
+		data:{
+			alumno:{
+                "nombre":"Artur",
+                "matricula":"A01374406",
+                "correo":"A01374406@itesm.mx"
             }
-        },
-        success(r){
-            console.log(r);
-        },
-        error(e){
-            console.log(error);
-        }
-    });
+		},
+		success:function(r){
+			console.log(r);
+		},
+		error:function(e){
+            console.log(e);
+		}
+	});
 }
 
 console.log("main.js");

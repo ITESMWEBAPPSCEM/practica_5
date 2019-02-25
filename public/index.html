@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>¡Bienvenido!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script href="public/main.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="public/main.js"></script>
 </head>
 
 <body class="w3-container w3-dark-grey">
@@ -36,27 +37,6 @@
         </p>
     </form>
 
-    <script>
-        function pasarLista() {
-            $.ajax({
-                url:"http://localhost:3000/pasar_lista",
-                type:'POST',
-                data:{
-                    "alumno":{
-                        "nombre":$('#nombre').val(),
-                        "matricula":$('#matricula').val(),
-                        "correo":$('#correo').val()
-                    }
-                },
-                success(r){
-                    console.log(r);
-                },
-                error(e){
-                    console.log(error);
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

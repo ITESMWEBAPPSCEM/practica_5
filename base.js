@@ -22,10 +22,12 @@ app.get('/', (req, res) => {
 
 app.post('/pasar_lista', (req, res) => {
     //Aquí va su código
+    console.log("*********************+");
     console.log(req.body);
-    let nombre = req.body.alumno.nombre;
-    let matricula = req.body.alumno.matricula;
-    let correo = req.body.alumno.correo
+    console.log("*********************+");
+    let nombre = req.body.nombre;
+    let matricula = req.body.matricula;
+    let correo = req.body.correo
     alumnos.push({"nombre":nombre,"matricula":matricula,"correo":correo});
     res.status(200).send({"status":true,"menssaje":"success","data":alumnos});
 
