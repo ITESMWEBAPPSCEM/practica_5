@@ -14,6 +14,7 @@ const alumnos = [];
 app.use("/public", express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile('index.html', {root: path.join(__dirname, './public')});
@@ -26,7 +27,7 @@ app.post('/pasar_lista', (req, res) => {
     let matricula = req.body.alumno.matricula;
     let correo = req.body.alumno.correo
     alumnos.push({"nombre":nombre,"matricula":matricula,"correo":correo});
-    res.send({"status":true,"menssaje":"success","data":alumnos});
+    res.status(200).send({"status":true,"menssaje":"success","data":alumnos});
 
 });
 
