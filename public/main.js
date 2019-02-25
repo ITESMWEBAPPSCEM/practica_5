@@ -6,9 +6,9 @@ function pasarLista() {
         type:'POST',
 		data:{
 			alumno:{
-                "nombre":"Artur",
-                "matricula":"A01374406",
-                "correo":"A01374406@itesm.mx"
+                "nombre":$('#nombre').val(),
+                "matricula":$('#matricula').val(),
+                "correo":$('#correo').val()
             }
 		},
 		success:function(r){
